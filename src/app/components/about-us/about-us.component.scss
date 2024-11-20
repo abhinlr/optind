@@ -1,0 +1,118 @@
+@import "../../../assets/styles/main.scss";
+
+#about-us{
+  .about-us-container{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%),url("../../../assets/images/about-us-bg.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+
+    .main{
+      padding: 10% 10% 15%;
+      color: #C7C7C7;
+
+      .text{
+        .title{
+          font-weight: 800;
+          font-size: 56px;
+          line-height: 67.2px;
+          display: inline-block;
+          max-width: 100%;
+          white-space: normal;
+        }
+        p{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .about-text, .us-text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .about-text {
+      display: flex;
+      height: 78px;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+      color: #EEE;
+      text-align: center;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+      letter-spacing: 5px;
+      opacity: 0.21;
+    }
+
+    .us-text {
+      display: flex;
+      height: 163px;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+      color: #EEE;
+      font-size: 200px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+      letter-spacing: -6px;
+      opacity: 0.21;
+    }
+
+    .mission-vision{
+      display: flex;
+      width: 792px;
+      height: 405px;
+      padding: 64px;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 32px;
+      flex-shrink: 0;
+      border-radius: 32px;
+      border: 1px solid rgba(0, 0, 0, 0.00);
+      background: radial-gradient(76.33% 76.33% at 52.23% 38.96%, rgba(0, 0, 0, 0.23) 0%, rgba(255, 255, 255, 0.00) 100%);
+      box-shadow: 15px 17px 25.7px -13px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset;
+
+      .mission, .vision {
+        display: flex;
+        width: 353px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 180px;
+        padding: 64px;
+        gap: 32px;
+        border-radius: 32px;
+        background: radial-gradient(76.33% 76.33% at 52.23% 38.96%, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%);
+        box-shadow: 15px 17px 25.7px -13px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset;
+        backdrop-filter: blur(32px);
+
+        h3{
+          align-self: stretch;
+          color: var(--Color-1, #FFF);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 140%;
+        }
+
+        p{
+          align-self: stretch;
+          color: #FFF;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}

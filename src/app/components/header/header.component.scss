@@ -1,0 +1,67 @@
+@import "../../../assets/styles/main.scss";
+
+#header {
+  position: fixed;
+  background: linear-gradient(349deg, rgba(255, 255, 255, 0.00) 6.47%, rgba(255, 255, 255, 0.00) 90.06%), rgba(255, 255, 255, 0.70);
+  backdrop-filter: blur(0.550000011920929px);
+  width: 100%;
+
+  .header-container {
+    padding: 8px 10%;
+
+    .logo{
+      img{
+        width: auto;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+
+    .caption{
+      font-size: 12px;
+      color: #4A4A4A;
+      text-align: center;
+      font-weight: 300;
+      line-height: 12px;
+      letter-spacing: 2px;
+      position: relative;
+      bottom: 5px;
+    }
+
+    .header-menu {
+      .menu-bg-img{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.2s ease, height 0.2s ease;
+        transform-origin: top;
+
+        &:hover{
+          transform: translate(-50%, -50%) scaleY(1.2);
+        }
+      }
+
+
+      ul{
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+
+        &:hover ~ .menu-bg-img {
+          transform: translate(-50%, -50%) scaleY(1.2); /* Scale height only */
+        }
+
+        li{
+          font-weight: 600;
+          font-size: 14px;
+          line-height:  21px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

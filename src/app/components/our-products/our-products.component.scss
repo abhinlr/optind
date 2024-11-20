@@ -1,0 +1,74 @@
+:host ::ng-deep{
+  /* Flex container for carousel items */
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+    overflow: hidden; /* Prevent overflow of images */
+  }
+
+  /* Left Section Styling */
+  .content-section {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  /* Right Section Styling */
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .product-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Carousel Arrows Styling */
+  .p-carousel-prev,
+  .p-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .p-carousel-prev {
+    left: calc(50% + 10px); /* Align near the left of the image */
+  }
+
+  .p-carousel-next {
+    right: 10px; /* Align to the right of the image */
+  }
+
+  /* Custom transition for vertical sliding */
+  .custom-carousel .p-carousel-items {
+    display: flex;
+    flex-direction: column; /* Change items layout to vertical */
+    height: 100%; /* Match container height */
+  }
+
+  .custom-carousel .p-carousel-item {
+    flex: 1 0 auto;
+    transition: transform 0.5s ease-in-out;
+  }
+
+}

@@ -1,0 +1,36 @@
+<section id="our-products">
+  <div class="our-products-container">
+    <div class="title">
+      <h1>Our Products</h1>
+    </div>
+    <div class="product-box">
+      <div class="card">
+        <p-carousel
+          [value]="productInfo()"
+          [numVisible]="1"
+          [numScroll]="1"
+          [circular]="true"
+          [styleClass]="'custom-carousel'"
+        >
+          <ng-template let-product pTemplate="item">
+            <div class="carousel-item">
+              <!-- Left Section for Title and Description -->
+              <div class="content-section">
+                <h3 class="title">{{ product.title }}</h3>
+                <p class="description">{{ product.description }}</p>
+              </div>
+              <!-- Right Section for Image -->
+              <div class="image-section">
+                <img
+                  src="{{ product.image }}"
+                  [alt]="product.title"
+                  class="product-image"
+                />
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+  </div>
+</section>

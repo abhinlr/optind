@@ -1,0 +1,59 @@
+@import "../../../assets/styles/main.scss";
+
+#our-services{
+  .our-services-container{
+    margin: 5% 15%;
+
+    .title h1{
+      color: var(--Color-4, #1C1C1C);
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+    }
+
+    .cards{
+      .card-1, .card-2{
+        width: 50%;
+        display: flex;
+        padding: 64px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: radial-gradient(76.33% 76.33% at 52.23% 38.96%, rgba(0, 0, 0, 0.00) 0%, rgba(255, 255, 255, 0.00) 100%);
+        box-shadow: 20px 17px 25.7px -13px rgba(0, 0, 0, 0.25), 0px 1px 0px 0px rgba(255, 255, 255, 0.08) inset;
+
+        h2{
+          color: #2E2E2E;
+          text-align: center;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 140%;
+          width: 50%;
+        }
+
+        p{
+          color: #2E2E2E;
+          text-align: center;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+
+        img{
+          width: 336px;
+          height: 163px;
+          border: 2px solid #FFF;
+          box-shadow: 0px 0px 137.9px -33px rgba(6, 255, 255, 0.48);
+        }
+      }
+    }
+  }
+
+}

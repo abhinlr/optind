@@ -1,0 +1,88 @@
+@import "../../../assets/styles/main.scss";
+
+#footer{
+  background-color: #fff;
+
+  .footer-container{
+    margin: 0 10%;
+  }
+
+  .phone{
+    span{
+      color: #000;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+    p{
+      color: #5F5F5F;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  .address{
+    span{
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+    }
+    p{
+      flex-shrink: 0;
+      color: #000;
+      text-align: center;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  .email{
+    span{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 63px;
+      background: var(--Color-1, #FFF);
+    }
+  }
+
+  .terms-conditions{
+    p{
+      color: #8C8C8C;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+  }
+
+  .copyright{
+    p{
+      color: #AEAEAE;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+}

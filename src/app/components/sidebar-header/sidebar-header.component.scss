@@ -1,0 +1,26 @@
+@import "../../../assets/styles/main.scss";
+
+#sidebar-header {
+  margin: 2% 10%;
+  .sidebar-header-container {
+    .logo{
+      img{
+        width: auto;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+    .back{
+      margin: 5%;
+
+      span{
+        color: var(--Color-1, #FFF);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+    }
+  }
+
+}

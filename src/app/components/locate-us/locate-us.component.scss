@@ -1,0 +1,32 @@
+@import "../../../assets/styles/main.scss";
+
+#locate-us{
+  .location-container{
+    margin: 0 15%;
+    position: relative;
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.06;
+      z-index: -1; /* Keeps the image behind other content */
+    }
+
+    .text-box{
+      .title{
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 44.8px;
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+      }
+    }
+
+
+  }
+}

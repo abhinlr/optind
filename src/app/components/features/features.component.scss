@@ -1,0 +1,30 @@
+@import "../../../assets/styles/main.scss";
+
+#features{
+  .features-container{
+    margin: 5% 10%;
+
+    .text-box{
+      .title{
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 67.2px;
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+      }
+      p{
+        max-width:50%;
+        word-wrap: break-word;
+        align-self: stretch;
+        color: var(--Color-3, #3C3C3C);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+
+
+  }
+}
