@@ -1,0 +1,183 @@
+@import "../../../assets/styles/main.scss";
+
+:host ::ng-deep {
+  #mobile {
+    display: none;
+  }
+
+  #our-products {
+    padding: 10% 0;
+
+    #bg-img {
+      background-image: url('../../../assets/images/product-bg.png'), url('../../../assets/images/product-bg.png');
+      background-size: 50vw auto;
+      background-position-x: -70%, 170%;
+      background-position-y: 50%; /* Initial position of the images off-screen */
+      background-repeat: no-repeat;
+      transition: background-position 0.5s ease-in-out;
+
+      &.in-view {
+        background-position-x: -10%, 120%;; /* Move both images to the center when in view */
+      }
+    }
+
+    .our-products-container {
+
+      margin: 0 15%;
+
+      .card {
+        padding: 5% !important;
+        border-radius: 57px;
+        background: transparent;
+        backdrop-filter: blur(10px);
+
+        & > div {
+          padding-bottom: 5% !important;
+        }
+
+        .main-title {
+          color: #3C3C3C;
+          font-size: 56px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 120%;
+        }
+
+        .image-section {
+          .product-image {
+            height: auto;
+            max-width: 25vw;
+            object-fit: cover;
+            border-radius: 57px;
+            margin: 10px;
+            box-shadow: 1px -1px 11.4px 7px rgba(0, 0, 0, 0.25);
+          }
+        }
+
+        .product-title {
+          color: #3C3C3C;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 140%;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: none;
+          text-decoration-thickness: auto;
+          text-underline-offset: auto;
+          text-underline-position: from-font;
+        }
+
+        .description {
+          color: #848484;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+
+        .view-details {
+          background-color: #3C3C3C;
+          border-radius: 100px;
+          color: #fff;
+          font-size: 14px !Important;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  // carousal styles
+
+  .p-carousel-indicators.p-reset {
+    position: absolute;
+    bottom: 5%;
+
+    .p-carousel-indicator {
+      button {
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+      }
+
+      &.p-highlight button {
+        background-color: #000 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  :host ::ng-deep {
+    #our-products {
+      display: none;
+    }
+
+    .card{
+      border: none;
+    }
+
+    #mobile {
+      display: block;
+
+      .main-title{
+        color: #3C3C3C;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 120%;
+      }
+
+      .our-products-container {
+        .product-image {
+          max-width: 75vw;
+          height: auto;
+          object-fit: contain;
+          border-radius: 75px;
+        }
+
+        .product-title {
+          color: #3C3C3C;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 140%;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: none;
+          text-decoration-thickness: auto;
+          text-underline-offset: auto;
+          text-underline-position: from-font;
+          text-align: center;
+        }
+
+        .description {
+          color: #848484;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+          text-align: center;
+        }
+      }
+
+      .p-carousel-indicators {
+        display: none;
+      }
+
+      .p-carousel-item{
+        padding: 10px;
+        border-radius: 75px;
+        background: rgba(217, 217, 217, 0.25);
+        backdrop-filter: blur(18.200000762939453px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 110vw;
+      }
+
+    }
+  }
+}

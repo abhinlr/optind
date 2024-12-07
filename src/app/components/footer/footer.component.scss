@@ -1,0 +1,131 @@
+@import "../../../assets/styles/main.scss";
+
+#footer{
+  background-color: #fff;
+
+  .footer-container{
+    margin: 0 10%;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* For larger screens (desktop view) */
+    gap: 20px; /* Adjust the space between items */
+  }
+
+  .phone{
+    a{
+      color: #000;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+      cursor: pointer;
+    }
+    p{
+      color: #5F5F5F;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  .address{
+    span{
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+    }
+    p{
+      flex-shrink: 0;
+      color: #000;
+      text-align: center;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  .email{
+    a{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 63px;
+      background: var(--Color-1, #FFF);
+      cursor: pointer;
+    }
+  }
+
+  .terms-conditions{
+    p{
+      color: #8C8C8C;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+      cursor: pointer;
+    }
+  }
+
+  .copyright{
+    p{
+      color: #AEAEAE;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #footer{
+    margin: 0 !important;
+    .footer-container{
+      hr{
+        margin: 0 !important;
+      }
+      .contact{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        .address{ /* Place the address div at the top */
+          width: 100%;
+          grid-column: 1 / -1;
+          order: -1;
+        }
+        .email{
+          order: -1;
+        }
+      }
+      .terms-conditions{
+        p{
+          font-size: 7px;
+        }
+      }
+      .copyright{
+        p{
+          font-size: 7px;
+        }
+      }
+    }
+  }
+}

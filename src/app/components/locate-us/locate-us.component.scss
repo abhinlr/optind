@@ -1,0 +1,73 @@
+@import "../../../assets/styles/main.scss";
+
+#locate-us{
+  .location-container{
+    margin: 0 15%;
+    padding: 40px 0;
+    position: relative;
+
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.06;
+      z-index: -1; /* Keeps the image behind other content */
+    }
+
+    .text-box{
+      .title{
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 44.8px;
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 600px) {
+  #locate-us{
+    .location-container{
+      margin: 0;
+      padding: 0;
+      gap: 0 !important;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../../../assets/images/logo.png") no-repeat center center;
+        background-size: cover;
+        opacity: 0.3;
+        z-index: -1; /* Ensure it stays behind content */
+      }
+      img{
+        display: none;
+      }
+      .text-box{
+        width: 40%;
+        .title{
+          font-size: 14px;
+        }
+      }
+      .map{
+        width: 60%;
+
+        iframe{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

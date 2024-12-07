@@ -1,0 +1,94 @@
+<section id="our-products">
+  <div id="bg-img">
+    <div class="our-products-container">
+      <div class="product-box">
+        <div class="card">
+          <h1 class="main-title mb-5">Our Products</h1>
+          <div class="row flex-row">
+            <div class="static-content col-md-5 d-flex flex-column justify-content-center align-items-baseline">
+              <h3 class="product-title w-50">
+                <a (click)="openProducts(productInfo()[activeIndex].id)">
+                  {{ productInfo()[activeIndex].title }}
+                </a>
+              </h3>
+              <span class="description  w-50">{{ productInfo()[activeIndex].description }}</span>
+              <button class="btn view-details mt-3 d-flex align-items-center gap-1">
+                <a (click)="openProducts(productInfo()[activeIndex].id)">
+                  View Details
+                  <img
+                    ngSrc="/images/right-arrow-white.svg" alt="" height="13" width="7"/>
+                </a>
+              </button>
+            </div>
+            <div class="col-md-7">
+              <p-carousel
+                [value]="productInfo()"
+                [numVisible]="1"
+                [numScroll]="1"
+                [circular]="true"
+                [showIndicators]="true"
+                [styleClass]="'custom-carousel'"
+                (onPage)="onCarouselPageChange($event)"
+              >
+                <ng-template let-product pTemplate="item">
+                  <div class="image-section d-flex justify-content-center align-items-center">
+                    <a (click)="openProducts(productInfo()[activeIndex].id)">
+                      <img
+                        src="{{ product.image }}"
+                        [alt]="product.title"
+                        class="product-image"
+                      />
+                    </a>
+                  </div>
+                </ng-template>
+              </p-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="mobile">
+  <div id="bg-img">
+    <div class="our-products-container">
+      <div class="product-box">
+        <div class="card">
+          <h1 class="main-title mb-4 text-center">Our Products</h1>
+          <div class="row flex-row">
+            <div class="col-md-7">
+              <p-carousel
+                [value]="productInfo()"
+                [numVisible]="1"
+                [numScroll]="1"
+                [circular]="true"
+                [showIndicators]="true"
+                [styleClass]="'custom-carousel'"
+              >
+                <ng-template let-product pTemplate="item">
+                  <div class="static-content col-md-5 d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="product-title w-100">
+                      <a (click)="openProducts(product.id)">
+                        {{product.title }}
+                      </a>
+                    </h3>
+                    <span class="description  w-75">{{ product.description }}</span>
+                  </div>
+                  <div class="image-section d-flex justify-content-center align-items-center">
+                    <a (click)="openProducts(product.id)">
+                      <img
+                        src="{{ product.image }}"
+                        [alt]="product.title"
+                        class="product-image"
+                      />
+                    </a>
+                  </div>
+                </ng-template>
+              </p-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

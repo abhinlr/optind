@@ -1,0 +1,99 @@
+@import "../../../assets/styles/main.scss";
+
+#banner{
+  .banner-container{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1) 100%),
+      url("../../../assets/images/banner.png") no-repeat center center;
+      background-size: cover;
+      transform: scaleX(1.2); /* Always scaled */
+      z-index: -1; /* Ensure it stays behind content */
+    }
+
+    .content{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      width: 100%;
+
+      h1{
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 73.6px;
+        word-wrap: break-word;
+      }
+
+      .banner-button {
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        color: #D6D6D6;
+        outline: none;
+        border-radius: 13px;
+        padding: 20px;
+        border: 1px solid #a7a7a7;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 22px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .banner-button::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border-radius: 50%;
+        transform: translate(-50%, 50%); /* Center at bottom-middle */
+        transition: width 0.3s ease, height 0.3s ease;
+        z-index: -1;
+      }
+
+      .banner-button:hover {
+        color: #000; /* Optional: Change text color on hover */
+        border-color: #fff; /* Optional: Change border color */
+      }
+
+      .banner-button:hover::after {
+        width: 150%; /* Expands the ripple to cover the button */
+        height: 300%;
+        background-color: #ffffff; /* Slightly more opaque ripple */
+      }
+
+    }
+  }
+}
+@media (max-width: 600px) {
+  #banner{
+    .banner-container{
+      .content {
+        h1{
+          font-size: 32px;
+          line-height: 36.8px;
+        }
+        .banner-button{
+          border-radius: 100px;
+          img{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

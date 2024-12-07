@@ -1,0 +1,77 @@
+@import "../../../assets/styles/main.scss";
+
+#terms {
+  padding: 5% 10%;
+
+  .back {
+    a{
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+  }
+
+  .terms-conditions-container {
+
+    .ownership{
+      margin-top: 5%;
+    }
+
+    ol{
+      margin:0;
+
+      p{
+        margin-bottom: 24px;
+      }
+    }
+    h1 {
+      color: #000;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+      width: 40%;
+    }
+
+    h3 {
+      color: rgba(0, 0, 0, 0.78);
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+    }
+
+    li::marker, h5{
+      color: rgba(0, 0, 0, 0.62);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 120%;
+    }
+    p {
+      color: rgba(0, 0, 0, 0.62);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    hr{
+      height: 2px;
+      background: #000;
+    }
+
+  }
+}
+
+@media (max-width: 600px) {
+  #terms {
+    h1{
+      font-size: 64px;
+      width: 100%;
+    }
+  }
+}

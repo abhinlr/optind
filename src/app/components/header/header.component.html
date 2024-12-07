@@ -1,0 +1,42 @@
+<section id="header">
+  <div class="header-container">
+    <div class="d-flex">
+      <div class="logo d-flex flex-column" (click)="navigateTo('')">
+        <img src="/images/logo.png" alt="Optind Logo"/>
+        <span class="caption">Perception Redefined</span>
+      </div>
+      <div class="header-menu px-5 py-4">
+        <div class="menu-list">
+          <ul class="d-flex gap-5 justify-content-center align-items-center ps-0">
+            <li><a href="#">Home</a></li>
+            <li ><a (click)="navigateTo('about-us')">About Us</a></li>
+            <li><a (click)="navigateTo('our-services')">Service</a></li>
+            <li><a (click)="navigateTo('our-products')">Products</a></li>
+            <li><a (click)="navigateTo('footer')">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="header-mobile">
+    <div class="header-mobile-container">
+      <div class="d-flex">
+        <div class="logo d-flex flex-column" routerLink="/" fragment="">
+          <img src="/images/logo.png" alt="Optind Logo"/>
+          <span class="caption w-100">Perception Redefined</span>
+        </div>
+        <div class="header-menu px-5 py-4" id="hamburger-icon" (click)="toggleMenu()">
+          <img src="/images/hamburger.svg" alt="Hamburger Icon" />
+        </div>
+      </div>
+      <div class="side-menu-overlay" id="side-menu-overlay" (click)="closeMenu()"></div>
+      <div class="side-menu" id="side-menu">
+        <ul>
+          <li><a (click)="navigateTo('about-us')">About Us</a></li>
+          <li><a (click)="navigateTo('mobile')">Products</a></li>
+          <li><a (click)="navigateTo('footer')">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

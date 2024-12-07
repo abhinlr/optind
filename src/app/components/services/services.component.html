@@ -1,0 +1,81 @@
+<section id="services" class="position-absolute">
+
+  <div class="sidebar-container position-sticky top-0 col-md-3">
+    <app-sidebar-header [isProductsPage]="false"></app-sidebar-header>
+  </div>
+
+
+  <div class="bg-image position-fixed">
+    <img src="/images/gear-1.svg" alt="" class="img-1">
+    <img src="/images/gear-2.svg" alt="" class="img-2">
+  </div>
+  <div class="services-container">
+    <div class="back cursor-pointer d-flex justify-content-end align-items-center gap-2 text-white z-3">
+      <a routerLink="/" class="back-arrow"><span><img src="/images/back.svg" alt="Back">Back</span></a>
+    </div>
+    <section class="section-1">
+      <div class="main-title w-25">
+        <h1>Our Services</h1>
+      </div>
+      <div class="navigation position-fixed">
+        <ul class="p-0 m-0 d-flex flex-column g-5">
+          <li><a (click)="navigateTo('section-2')">EPAC Online</a></li>
+          <li><a (click)="navigateTo('section-3')">The EyeCSite 2.0</a></li>
+        </ul>
+      </div>
+      <div class="move-to-bottom">
+        <a (click)="navigateTo('section-2')"><img src="/images/move-to-bottom.svg" alt=""></a>
+      </div>
+    </section>
+
+
+    <section id="section-2" class="section-2 col-md-8 d-flex align-items-center">
+      <div>
+        <div class="title">
+          <h1>EPAC Online</h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="image col-md-8">
+            <img src="/images/epac.png" alt="" class="img">
+          </div>
+          <div class="description col-md-4">
+            <p>EPAC online (Prepared for Chiappalone Consulting Pvt Ltd, Australia): It’s an online spectral analysis
+              platform. One can upload data into server using one desktop application then we can do the analysis in
+              server and seen the result and can download the result in csv format. This software gives real concentration
+              of compounds using proprietary algorithm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="section-3" class="section-3 col-md-8 d-flex align-items-center">
+      <div>
+        <div class="title w-75 mb-5">
+          <h1>The EyeCSite 2.0 Software</h1>
+        </div>
+        <div class="row align-items-center">
+          <div class="description col-md-4">
+            <p>The EyeCSite 2.0 software: (Prepared for Opgal Optronic Industries Ltd, Israel). It is an elegant tool that
+              gives an extra edge to gas leak detection technique. It is a sophisticated software that interacts with the
+              OpgalEyeCGas Gen.2 camera via USB connectivity or over WiFi. The leak observed by the camera is processed
+              live or as post-process by the software and it provides emission estimate rates (in g/hr unit) and mixing
+              ratio (in PPM) of leaked gas.</p>
+          </div>
+          <div class="image col-md-8 text-center">
+            <img src="/images/eyecsite.png" alt="" class="img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-4" class="section-4">
+      <div class="w-100 bg-white" id="footer">
+        <app-footer></app-footer>
+      </div>
+    </section>
+
+  </div>
+
+</section>
+

@@ -1,0 +1,17 @@
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+
+  &__header {
+    z-index: 9999;
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__footer {
+    z-index: 9999;
+  }
+}

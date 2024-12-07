@@ -1,0 +1,36 @@
+<section id="sidebar-header" >
+  <div class="sidebar-header-container d-flex justify-content-between flex-column">
+    <div class="logo">
+      <a href="/"><img src="/images/logo.png" alt="Optind Logo"/></a>
+    </div>
+    @if(isProductsPage()){
+
+      <div class="menu" style="color: white;">
+        <ul>
+
+          <li><a (click)="navigateToSection('section-1')">About Item</a></li>
+          @if(feature()){
+
+          <li><a (click)="navigateToSection('section-2')">Features</a></li>
+          }
+          @if(spec()){
+            <li><a (click)="navigateToSection('section-3')">Product Specifications</a></li>
+
+          }
+          @if(video()){
+            <li><a (click)="navigateToSection('video')">Video</a></li>
+
+          }
+        </ul>
+      </div>
+    }
+
+    <!-- <div class="back cursor-pointer d-flex justify-content-center align-items-center gap-2">
+      <img src="/images/back.svg" alt="Back">
+      <a routerLink="/"><span>Back</span></a>
+    </div> -->
+
+
+  </div>
+</section>
+

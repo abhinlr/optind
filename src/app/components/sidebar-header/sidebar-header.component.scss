@@ -1,0 +1,67 @@
+@import "../../../assets/styles/main.scss";
+
+#sidebar-header {
+  margin: 2% 10%;
+
+  .sidebar-header-container {
+    height: 500px;
+
+    .logo {
+      img {
+        max-width: 180px;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .back {
+      margin: 5%;
+
+      span {
+        color: var(--Color-1, #FFF);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+    }
+
+    .menu {
+      height: 60%;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        li {
+          margin-block: .5rem;
+          width: fit-content;
+          transition: all 0.2s ease;
+        }
+
+        li:hover {
+          color: #00EEFF;
+          transform: translateX(35%) scale(1.5);
+        }
+      }
+
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  #sidebar-header {
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .logo img{
+    width: 120px;
+  }
+}

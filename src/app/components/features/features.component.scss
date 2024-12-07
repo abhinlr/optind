@@ -1,0 +1,68 @@
+@import "../../../assets/styles/main.scss";
+
+#features {
+  .features-container {
+    margin: 5% 15%;
+
+    .text-box {
+      .title {
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 67.2px;
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+      }
+
+      p {
+        max-width: 50%;
+        word-wrap: break-word;
+        align-self: stretch;
+        color: var(--Color-3, #3C3C3C);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 600px) {
+  #features {
+    .features-container {
+      margin: 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../../../assets/images/optind.png") no-repeat center center;
+        background-size: contain;
+        opacity: 0.4;
+        z-index: -1; /* Ensure it stays behind the content */
+      }
+
+      .text-box {
+        .title {
+          width: 75%;
+        }
+
+        p {
+          margin-top: 30px;
+          max-width: 75%;
+        }
+      }
+
+      .logo {
+        display: none;
+      }
+    }
+  }
+}
